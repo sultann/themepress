@@ -70,6 +70,7 @@ require_once (THM_THEME_INC_DIR.'/bootstrap-wp-navwalker.php');
 function themeeo_scripts() {
     // Load stylesheets
     wp_register_style('theme-style', get_template_directory_uri() . '/css/style.css',array('bootstrap'));
+	wp_register_style('custom-style', get_template_directory_uri() . '/css/theme.css',array('bootstrap'));
     wp_register_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
     wp_register_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
@@ -80,8 +81,9 @@ function themeeo_scripts() {
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('font-awesome');
     wp_enqueue_style('style-dynamic');
-    wp_enqueue_style('responsive-styles');
     wp_enqueue_style('theme-style');
+    wp_enqueue_style('custom-style');
+	wp_enqueue_style('responsive-styles');
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -93,7 +95,7 @@ function themeeo_scripts() {
     wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
     wp_register_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'));
     wp_register_script('tether', get_template_directory_uri() . '/js/tether.min.js', array('jquery'));
-//    wp_register_script('wow-js', get_template_directory_uri() . '/js/wow.min.js', array('jquery'));
+    wp_register_script('wow-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'));
 //    wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', array('jquery') );
 
 
@@ -161,16 +163,6 @@ if(!function_exists('themeeo_widget_init')):
             'after_title' => '</h3>',
         ) );
 
-
-        register_sidebar( array(
-            'name'          => __( 'Footer Area 4', 'published' ),
-            'id'            => 'footer-4',
-            'description'   => 'Footer 4 Widget Area',
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>',
-        ) );
 
 
     }

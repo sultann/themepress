@@ -11,7 +11,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "http://wpfisher.dev/",
+    proxy: "http://nevin.dev/",
     notify: true
 };
 

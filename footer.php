@@ -10,29 +10,39 @@
 ?>
 
 <div class="wrapper" id="wrapper-footer">
+    <div class="widgets-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="<?php echo get_stylesheet_directory_uri().'/images/logo-white.png'; ?>" alt="">
+                    <p>Vivamus sollicitudin molestie nunc, vulputate lobortis eros efficitur quis. Curabitur vel laoreet nisi. Integer eu quam consectetur, cursus nisl id, cursus nisi. Duis interdum, massa id pharetra sodales, justo nibh auctor urna, vel semper urna odio quis orci. Sed consectetur feugiat eleifend.</p>
+                </div>
+                <div class="col-md-4"><?php dynamic_sidebar( 'footer-1' ); ?></div>
+                <div class="col-md-4"><?php dynamic_sidebar( 'footer-2' ); ?></div>
+            </div>
+        </div>
+    </div>
 
-    <div class="container">
+    <div class="copyright">
+        <div class="container">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-md-12">
+                <div class="col-md-12">
 
-                <footer id="colophon" class="site-footer" role="contentinfo">
+                    <footer id="colophon" class="site-footer" role="contentinfo">
+                        <div class="site-info">
+                            <p class="text-xs-center">&copy copyright 2017. All right reserved.</p>
+                        </div><!-- .site-info -->
 
-                    <div class="site-info">
-                        <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'themeeo' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'themeeo' ), 'WordPress' ); ?></a>
-                        <span class="sep"> | </span>
-                        <?php printf( __( 'Theme: %1$s by %2$s.', 'themeeo' ), $the_theme->get( 'Name' ), '<a href="http://themeeo.com/" rel="designer">themeeo.com</a>' ); ?>
-                        (<?php printf( __( 'Version: %1$s', 'themeeo' ), $the_theme->get( 'Version' ) ); ?>)
-                    </div><!-- .site-info -->
+                    </footer><!-- #colophon -->
 
-                </footer><!-- #colophon -->
+                </div><!--col end -->
 
-            </div><!--col end -->
+            </div><!-- row end -->
 
-        </div><!-- row end -->
-
-    </div><!-- container end -->
+        </div><!-- container end -->
+    </div>
 
 </div><!-- wrapper end -->
 
